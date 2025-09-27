@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gagstore.gg</title>
+    <link rel="stylesheet" href="styles.css">
+</head><link rel="icon" type="image/x-icon" href="/images/server_icon.png">
+    <main>
+        <nav class="navbar">
+            <div class="navbar_container">
+                <a href="/" class="navbar_logo">gagstore.gg</a>
+                <div class="navbar_toggle" id="mobile_menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <a href="/public/index.html" class="navbar_links">Home</a>
+                    </li>
+                    <li class="selected navbar_item">
+                        <a href="/public/products.html" class="navbar_links">Products</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/public/faq.html" class="navbar_links">FAQ</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="https://discord.gg/growgardening" class="navbar_links">Discord</a>
+                    </li>
+                </ul>
+                <buitton id="cart_button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="cart_panel" class="closed">
+            <button id="cart_close_button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="cart_discount_upsell">
+                <h2>Buy $25.00 more to enjoy $5 off your purchase!</h2>
+                <progress value="1000" max="2500">% Complete</progress>
+            </div>
+            <div id="cart_container">
+                <h1 id="cart_label">Your Cart</h1>
+                <div id="cart_items"></div>
+            </div>
+            <div id="checkout_section">
+                <div class="link_discord">
+                    <button id="link_discord_button">
+                        <i class="fa-brands fa-discord"></i>
+                        Link Discord
+                    </button>
+                </div>
+                <div class="checkout hidden">
+                    <div class="discord_profile">
+                        <img src="/public/images/discord_logo.jpg" alt="Discord Avatar" class="discord_avatar">
+                        <div class="discord_info">
+                            <h2 class="discord_username">dexetron</h2>
+                            <a href="">Not you?</a>
+                        </div>
+                    </div>
+                    <button id="checkout_button">Checkout</button>
+                </div>
+            </div>
+            <div id="cart_product_upsell">
+                <h2>You might also like</h2>
+                <div id="cart_upsell_products"></div>
+            </div>
+        </div>
+        <div id="product_add_panel">
+            <i class="close-button fa-solid fa-xmark"></i>
+            <div class="title_bar">
+                <i class="fa-solid fa-check"></i>
+                <h1>Added to Cart</h1>
+            </div>
+            <div class="cart_item">
+                <img class="cart_item_image" src="" alt=""></img>
+                <div class="cart_item_info">
+                    <h2 class="cart_item_title"></h2>
+                    <div class="cart_item_quantity">
+                        <h2 class="cart_item_price"></h2>
+                        <i class="decrement_button fa-solid fa-minus"></i>
+                        <div class="cart_item_amount"></div>
+                        <i class="increment_button fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="products_section">
+            <div class="products">
+                <h1 class="section_title">Products</h1>
+                <div class="products_container" id="products_container"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="https://kit.fontawesome.com/ab78a32115.js" crossorigin="anonymous"></script>
+</body>
+</html>
