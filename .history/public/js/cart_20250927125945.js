@@ -9,11 +9,9 @@ let cart_panel = document.getElementById('cart_panel');
 let cart_close_button = document.getElementById('cart_close_button');
 let link_discord_button = document.getElementById('link_discord_button');
 
-const BACKEND_URL = "https://gagstore-backend.onrender.com"
-
 async function getProduct(productHandle) {
   try {
-    const response = await fetch(`${BACKEND_URL}/api/shopify/getProduct/${encodeURIComponent(productHandle)}`);
+    const response = await fetch(`http://localhost:3000/api/shopify/getProduct/${encodeURIComponent(productHandle)}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -27,7 +25,7 @@ async function getProduct(productHandle) {
 
 async function getCollection(collectionId) {
   try {
-    const response = await fetch(`${BACKEND_URL}/api/shopify/getCollection/${encodeURIComponent(collectionId)}`);
+    const response = await fetch(`http://localhost:3000/api/shopify/getCollection/${encodeURIComponent(collectionId)}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -201,8 +199,8 @@ let generateCartItems = async () => {
 };
 
 async function linkDiscord() {
-    window.location.href = `${BACKEND_URL}/login`;
-    //window.location.href = `${BACKEND_URL}/login?redirect=${encodeURIComponent(redirectPage)}`;
+    window.location.href = `http://localhost:3000/login`;
+    //window.location.href = `http://localhost:3000/login?redirect=${encodeURIComponent(redirectPage)}`;
 }
 
 async function checkoutWithShopify() {
@@ -216,7 +214,7 @@ async function checkoutWithShopify() {
     checkout_button.innerHTML = "Loading..."
 
     try {
-        const syncResponse = await fetch(`${BACKEND_URL}/api/cart/sync`, {
+        const syncResponse = await fetch(`http://localhost:3000/api/cart/sync`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -235,7 +233,7 @@ async function checkoutWithShopify() {
             console.log('Unavailable items:', data.unavailableItems);
         }
 
-        const guildRes = await fetch(`${BACKEND_URL}/api/check-guild`, {
+        const guildRes = await fetch('http://localhost:3000/api/check-guild', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${sessionId}`
@@ -248,7 +246,7 @@ async function checkoutWithShopify() {
             window.open(data.checkoutUrl, '_blank');
         } else {
             checkout_button.innerHTML = "Joining Discord..."
-            const joinRes = await fetch(`${BACKEND_URL}/api/join-guild`, {
+            const joinRes = await fetch(`http://localhost:3000/api/join-guild`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${sessionId}`
@@ -294,7 +292,7 @@ cart_button.addEventListener('click', async function() {
     try {
         const sessionId = getCookie('session_id');
         
-        const meRes = await fetch(`${BACKEND_URL}/api/me`, {
+        const meRes = await fetch('http://localhost:3000/api/me', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${sessionId}`

@@ -1,8 +1,6 @@
-const BACKEND_URL = "https://gagstore-backend.onrender.com"
-
 async function getCollection(collectionId) {
   try {
-    const response = await fetch(`${BACKEND_URL}/api/shopify/getCollection/${encodeURIComponent(collectionId)}`);
+    const response = await fetch(`http://localhost:3000/api/shopify/getCollection/${encodeURIComponent(collectionId)}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -20,7 +18,7 @@ async function getCollection(collectionId) {
 
 async function getProduct(productHandle) {
   try {
-    const response = await fetch(`${BACKEND_URL}/api/shopify/getProduct/${encodeURIComponent(productHandle)}`);
+    const response = await fetch(`http://localhost:3000/api/shopify/getProduct/${encodeURIComponent(productHandle)}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
