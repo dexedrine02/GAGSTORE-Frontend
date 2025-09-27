@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gagstore.gg</title>
+    <link rel="stylesheet" href="styles.css">
+</head><link rel="icon" type="image/x-icon" href="/images/server_icon.png">
+    <main>
+        <nav class="navbar">
+            <div class="navbar_container">
+                <a href="/" class="navbar_logo">gagstore.gg</a>
+                <div class="navbar_toggle" id="mobile_menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="selected navbar_item">
+                        <a href="/public/index.html" class="navbar_links">Home</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/public/products.html" class="navbar_links">Products</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/public/faq.html" class="navbar_links">FAQ</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="https://discord.gg/growgardening" class="navbar_links">Discord</a>
+                    </li>
+                </ul>
+
+                <buitton id="cart_button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="cart_panel" class="closed">
+            <button id="cart_close_button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="cart_discount_upsell">
+                <h2>Buy $25.00 more to enjoy $5 off your purchase!</h2>
+                <progress value="1000" max="2500">% Complete</progress>
+            </div>
+            <div id="cart_container">
+                <h1 id="cart_label">Your Cart</h1>
+                <div id="cart_items"></div>
+            </div>
+            <div id="checkout_section">
+                <div class="link_discord">
+                    <button class="link_discord_button">
+                        <i class="fa-brands fa-discord"></i>
+                        Link Discord
+                    </button>
+                </div>
+                <div class="checkout hidden">
+                    <div class="discord_profile">
+                        <img src="/public/images/discord_logo.jpg" alt="Discord Avatar" class="discord_avatar">
+                        <div class="discord_info">
+                            <h2 class="discord_username">dexetron</h2>
+                            <a href="">Not you?</a>
+                        </div>
+                    </div>
+                    <button id="checkout_button">Checkout</button>
+                </div>
+            </div>
+            <div id="cart_product_upsell">
+                <h2>You might also like</h2>
+                <div id="cart_upsell_products"></div>
+            </div>
+        </div>
+        <section class="hero_section">
+            <div class="banner shimmer floating">
+                <h1 class="banner_title_upper">The BEST Marketplace for GAG</h1>
+                <h1 class="banner_title_lower">GAGSTORE.GG</h1>
+                <button class="get_started_button">Shop Now</button>
+            </div>
+            <div class="qualities">
+                <h2 class="section_subtitle">Why Us?</h2>
+                <h1 class="section_title">Our Qualities</h1>
+                <ul class="qualities_list">
+                    <li class="quality_item floating">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <div class="quality-descriptive-content">
+                            <h1>Competitive Pricing</h1>
+                            <p>Our commitment to affordability means you’ll always find competitive pricing without compromising on quality. We continuously monitor the market to ensure that you’re getting the best possible deal every time you shop with us.</p>
+                        </div>
+                    </li>
+                    <li class="quality_item floating">
+                        <i class="fa-solid fa-wallet"></i>
+                        <div class="quality-descriptive-content">
+                            <h1>Secure Payments</h1>
+                            <p>Your safety is our top priority, which is why all transactions are encrypted and handled through Shopify’s trusted, world-class payment system. You can shop with confidence knowing your personal and financial information is fully protected.</p>
+                        </div>
+                    </li>
+                    <li class="quality_item floating">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div class="quality-descriptive-content">
+                            <h1>Quick Delivery</h1>
+                            <p>From the moment you place your order, our team works diligently to , ship your products with speed and care. We value your time, so we make sure your items reach you as fast as possible without any unnecessary delays.</p>
+                        </div>
+                    </li>
+                    <li class="quality_item floating">
+                        <i class="fa-solid fa-paw"></i>
+                        <div class="quality-descriptive-content">
+                            <h1>Large Variety</h1>
+                            <p>Whether you’re looking for giant pets or a large amount of sheckles, our diverse selection ensures that there’s something for everyone. With new products added regularly, you’ll always discover fresh options to suit your garden.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="tutorial_section">
+            <h2 class="section_subtitle">Tutorial</h2>
+            <h1 class="section_title">How Does It Work?</h1>
+            <div class="tutorial_content">
+                <ol class="tutorial_steps">
+                    <li class="tutorial_step">
+                        <h1 class="step_number">1</h1>
+                        <div class="step_text_body">
+                            <h1 class="step_title">Pick Your Items</h1>
+                            <p class="step_description">Browse our curated collection of best sellers or use our advanced search to find your dream items with precision and ease</p>
+                        </div>
+                    </li>
+                    <li class="tutorial_step">
+                        <h1 class="step_number">2</h1>
+                        <div class="step_text_body">
+                            <h1 class="step_title">Secure Checkout</h1>
+                            <p class="step_description">Use our enterprise-grade secure checkout system for a smooth, safe, and protected purchase experience every time</p>
+                        </div>
+                    </li>
+                    <li class="tutorial_step">
+                        <h1 class="step_number">3</h1>
+                        <div class="step_text_body">
+                            <h1 class="step_title">Discord Server</h1>
+                            <p class="step_description">Join our Discord server to claim your items!</p>
+                            <button class="discord_button">
+                                <i class="fa-brands fa-discord"></i>
+                                gagstore.gg
+                            </button>
+                        </div>
+                    </li>
+                </ol>
+                <iframe
+                    src="https://www.youtube.com/embed/ARtG8Pttn3Y">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://kit.fontawesome.com/ab78a32115.js" crossorigin="anonymous"></script>
+</body>
+</html>
