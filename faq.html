@@ -19,16 +19,17 @@
                     <li class="navbar_item">
                         <a href="/public/index.html" class="navbar_links">Home</a>
                     </li>
-                    <li class="selected navbar_item">
+                    <li class="navbar_item">
                         <a href="/public/products.html" class="navbar_links">Products</a>
                     </li>
-                    <li class="navbar_item">
+                    <li class="selected navbar_item">
                         <a href="/public/faq.html" class="navbar_links">FAQ</a>
                     </li>
                     <li class="navbar_item">
                         <a href="https://discord.gg/growgardening" class="navbar_links">Discord</a>
                     </li>
                 </ul>
+
                 <buitton id="cart_button">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </button>
@@ -69,32 +70,45 @@
                 <div id="cart_upsell_products"></div>
             </div>
         </div>
-        <div id="product_add_panel">
-            <i class="close-button fa-solid fa-xmark"></i>
-            <div class="title_bar">
-                <i class="fa-solid fa-check"></i>
-                <h1>Added to Cart</h1>
-            </div>
-            <div class="cart_item">
-                <img class="cart_item_image" src="" alt=""></img>
-                <div class="cart_item_info">
-                    <h2 class="cart_item_title"></h2>
-                    <div class="cart_item_quantity">
-                        <h2 class="cart_item_price"></h2>
-                        <i class="decrement_button fa-solid fa-minus"></i>
-                        <div class="cart_item_amount"></div>
-                        <i class="increment_button fa-solid fa-plus"></i>
+        <section class="faq_section">
+            <div class="section_title">Frequently Asked Questions</div>
+            <div class="faq_list">
+                <div class="faq_item">
+                    <div class="faq_item_question">
+                        <h2>How do I claim my items</h2>
+                        <i class="fa-solid fa-angle-down"></i>
                     </div>
+                    <p class="faq_item_answer">
+                        When checking out, you should have linked your Discord account, this allows us to automatically add you to our Discord server and create a ticket for you! Once you've checked out, open Discord and go to our server, that's where you'll see your ticket.
+                    </p>
                 </div>
-            </div>
-            <div class="divider"></div>
-            <h2>You might also like</h2>
-        </div>
-
-        <section class="products_section">
-            <div class="products">
-                <h1 class="section_title">Products</h1>
-                <div class="products_container" id="products_container"></div>
+                <div class="faq_item">
+                    <div class="faq_item_question">
+                        <h2>What payment methods can I use?</h2>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p class="faq_item_answer">
+                        You can use any major credit cards, debit cards, and express checkout (Shop Pay, Amazon Pay, Google Pay) with our Shopify payment processor.
+                    </p>
+                </div>
+                <div class="faq_item">
+                    <div class="faq_item_question">
+                        <h2>Can I cancel or change my order?</h2>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p class="faq_item_answer">
+                        After placing your order, you will NOT be able to change it, but you may cancel it. View our refund policy for more information.
+                    </p>
+                </div>
+                <div class="faq_item">
+                    <div class="faq_item_question">
+                        <h2>How long does delivery take?</h2>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p class="faq_item_answer">
+                        All items are GUARANTEED to be delivered within 24 hours of purchase.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -122,9 +136,9 @@
         </section>
     </main>
 
-    <script src="js/app.js"></script>
-    <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/faq.js"></script>
     <script src="https://kit.fontawesome.com/ab78a32115.js" crossorigin="anonymous"></script>
 </body>
 </html>

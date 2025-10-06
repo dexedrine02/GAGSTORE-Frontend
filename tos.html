@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gagstore.gg</title>
+    <link rel="stylesheet" href="styles.css">
+</head><link rel="icon" type="image/x-icon" href="/images/server_icon.png">
+    <main>
+        <nav class="navbar">
+            <div class="navbar_container">
+                <a href="/" class="navbar_logo">gagstore.gg</a>
+                <div class="navbar_toggle" id="mobile_menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <a href="/public/index.html" class="navbar_links">Home</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/public/products.html" class="navbar_links">Products</a>
+                    </li>
+                    <li class="selected navbar_item">
+                        <a href="/public/faq.html" class="navbar_links">FAQ</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="https://discord.gg/growgardening" class="navbar_links">Discord</a>
+                    </li>
+                </ul>
+
+                <buitton id="cart_button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="cart_panel" class="closed">
+            <button id="cart_close_button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="cart_discount_upsell">
+                <h2>Buy $25.00 more to enjoy $5 off your purchase!</h2>
+                <progress value="1000" max="2500">% Complete</progress>
+            </div>
+            <div id="cart_container">
+                <h1 id="cart_label">Your Cart</h1>
+                <div id="cart_items"></div>
+            </div>
+            <div id="checkout_section">
+                <div class="link_discord hidden">
+                    <button id="link_discord_button">
+                        <i class="fa-brands fa-discord"></i>
+                        Link Discord
+                    </button>
+                </div>
+                <div class="checkout hidden">
+                    <div class="discord_profile">
+                        <img src="/public/images/discord_logo.webp" alt="Discord Avatar" class="discord_avatar">
+                        <div class="discord_info">
+                            <h2 class="discord_username">dexetron</h2>
+                            <button id="discord_not_you">Not you?</button>
+                        </div>
+                    </div>
+                    <button id="checkout_button">Checkout</button>
+                </div>
+            </div>
+            <div id="cart_product_upsell">
+                <h2>You might also like</h2>
+                <div id="cart_upsell_products"></div>
+            </div>
+        </div>
+        <section class="tos_section">
+            <div class="tos_container">
+                <div class="section_title">Terms of Service</div>
+                <div class="tos_list">
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">LEGAL DISCLAIMER & NON-AFFILIATION</h2>
+                        <p class="tos_category_description">
+                            gagstore.gg is a third-party coordination service not affiliated with, endorsed by, or associated with Roblox Corporation, Discord Inc, or Grow A Garden. All trademarks, game names, and assets referenced are property of their respective owners. Any references to "Grow a Garden" or "Roblox" are made strictly for descriptive purposes.
+                            <br><br>
+                            We make no claims of partnership, license, or collaboration with any third-party platform, including but not limited to Roblox Corporation or Discord Inc. Use of their services remains governed by their own Terms of Use, and you agree to release us from liability related to any issues arising on those platforms.
+                        </p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">USER RESPONSIBILITY AGREEMENT</h2>
+                        <p class="tos_category_description">By using this website or engaging with our services in any capacity, you agree to the following:</p>
+                        <ul class="tos_category_points">
+                            <li>You are at least 13 years old. If you are under 18, you have parental consent to make purchases and use online services.</li>
+                            <li>You are solely responsible for understanding and complying with all terms set forth by Roblox Corporation, Discord Inc, and other relevant platforms.</li>
+                            <li>You acknowledge that all risk associated with use of our service, including but not limited to account moderation, item losses, or Roblox policy enforcement, lies solely with you.</li>
+                            <li>You are responsible for monitoring any changes in Roblox's or Discord's policies that may affect your account or digital assets.</li>
+                            <li>gagstore.gg assumes no responsibility for the actions taken by Roblox, Discord, or any other third party in response to your use of this service.</li>
+                            <li>You agree not to use our services in any way that would violate the policies of Roblox, Discord, or U.S. law, including but not limited to intellectual property misuse, harassment, or fraud.</li>
+                        </ul>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">OUR SERVICES</h2>
+                        <p class="tos_category_description">
+                            We provide a coordinated delivery service for interactive property in the Roblox game "Grow a Garden." You are paying for our time, expertise, and effort to coordinate delivery—not the virtual content itself. All assets are procured legally through gameplay, in-game trades, or purchases made with Roblox's official currency.
+                            <br><br>
+                            gagstore.gg operates independently and is not affiliated with, endorsed by, or integrated into Roblox's platform, services, or marketplace. All coordination, besides the act of in-game trading, occurs off-platform, and no part of our service modifies, interferes with, or exploits Roblox systems.
+                            <br><br>
+                            Our services are governed by U.S. commercial law and are not subject to enforcement under Roblox's internal platform policies. Any coordination occurring within the Roblox ecosystem is fully compliant with their Terms of Use and conducted through standard in-game mechanisms (e.g., trading, gifting).
+                            <br><br>
+                            We do NOT:
+                        </p>
+                        <ul class="tos_category_points">
+                            <li>Sell Robux, accounts, or access to Roblox Premium features</li>
+                            <li>Interfere with, exploit, or automate Roblox systems</li>
+                            <li>Guarantee any game outcomes, advantages, or endorsements</li>
+                        </ul>
+                        <p class="tos_category_description">
+                            <br>
+                            Grow a Garden is a user-created experience hosted on the Roblox platform. The developer of this game does not have ownership or control over the Roblox infrastructure, nor do they hold exclusive rights to any in-game assets stored on or delivered through Roblox's systems. Any coordination of assets through our service within Roblox occurs strictly within the bounds of Roblox's publicly available features on the Grow a Garden game and is governed by Roblox's Terms of Use—which we strictly follow—not by any individual developer's personal rules or preferences.
+                        </p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">ORDER FULFILLMENT & DELIVERY TERMS</h2>
+                        <ul class="tos_category_points">
+                            <li>Delivery is defined as the successful transfer of an asset using Roblox's Grow a Garden in-game trade, gift, or drop systems.</li>
+                            <li>Delivery typically occurs within 24 hours unless delayed by verification, platform outages, or moderation flags.</li>
+                            <li>It is the user's responsibility to ensure that the correct Roblox username is provided. Errors in usernames may lead to failed delivery with no refund, and it is the responsibility of the consumer to communicate with staff looking to resolve the issue.</li>
+                        </ul>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">PAYMENTS</h2>
+                        <p class="tos_category_description">
+                            We accept USD via Shopify (credit/debit cards, CashApp, and PayPal)
+                            <br>
+                            All payments are due at checkout. Prices may change at any time without prior notice.
+                        </p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">SERVICE INTERRUPTIONS & FORCE MAJEURE</h2>
+                        <p class="tos_category_description">We are not liable for delays or service failures caused by:</p>
+                        <ul class="tos_category_points">
+                            <li>Platform Outages</li>
+                            <li>Roblox API Changes</li>
+                            <li>Payment Processor Issues</li>
+                            <li>Internet Disruptions</li>
+                            <li>Events Beyond Our Control (e.g., natural disasters, force majeure)</li>
+                        </ul>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">NO GUARANTEE OF ITEM AVAILABILITY</h2>
+                        <p class="tos_category_description">gagstore.gg is not affiliated with Grow a Garden and does not guarantee the future existence, performance, or value of any interactive property used in Roblox's Grow a Garden game. Assets may be removed, deprecated, or modified at any time by the game developer or Roblox Corporation. You acknowledge that your purchase is for coordination and delivery—not ownership or permanence of any virtual item.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">THIRD-PARTY TERMS & COMPLIANCE</h2>
+                        <p class="tos_category_description">You acknowledge and agree that your access to or use of Roblox, Discord, and any third-party services is governed solely by the terms and policies of those platforms. gagstore.gg does not control and is not responsible for the terms, updates, enforcement actions, or service interruptions imposed by these third parties. It is your responsibility to review and comply with any applicable agreements.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">COMPLIANCE INVESTIGATIONS</h2>
+                        <p class="tos_category_description">gagstore.gg reserves the right to investigate any activity suspected of violating these Terms, and to cooperate with platform holders (e.g., Roblox, Discord), legal authorities, or cybersecurity firms in the event of fraud, abuse, or harassment. This may include disclosing user data where legally required or justified to protect the platform or community.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">NON-COMMERCIAL WARRANTY</h2>
+                        <p class="tos_category_description">All services are provided "as-is" without warranty of any kind, whether express or implied. This includes, without limitation, warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant uninterrupted access, error-free operation, or long-term viability of any digital asset or service.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">USER CONDUCT</h2>
+                        <p class="tos_category_description">You agree not to:</p>
+                        <ul class="tos_category_points">
+                            <li>Provide false or misleading information</li>
+                            <li>Abuse refund systems or exploit delivery loopholes</li>
+                            <li>Attempt to reverse-engineer or tamper with the site</li>
+                            <li>Use the Site for unlawful or deceptive purposes</li>
+                        </ul>
+                        <p class="tos_category_description">Violations may result in permanent bans and/or legal action.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">LIMITATION OF LIABILITY</h2>
+                        <ul class="tos_category_points">
+                            <li>gagstore.gg is not liable for moderation actions, suspensions, bans, rollbacks, or other enforcement decisions made by Roblox Corporation, Discord Inc, or game developers, including the creators of Grow a Garden.</li>
+                            <li>We are not liable for digital asset depreciation, inaccessibility, loss, or modification due to game updates, moderation actions, or system changes by any third-party platform.</li>
+                            <li>We do not guarantee the continued availability of any virtual asset or game experience.</li>
+                            <li>We are not liable for user misunderstandings of platform rules, in-game mechanics, or policy enforcement decisions made by external services.</li>
+                            <li>We do not refund purchases for user error, in-game changes, policy violations, or account restrictions imposed externally.</li>
+                            <li>You agree not to hold us responsible for any financial, reputational, or digital loss arising from your use of this service or from platform-level consequences related to Roblox, Discord, or Grow a Garden.</li>
+                        </ul>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">INDEMNIFICATION</h2>
+                        <p class="tos_category_description">You agree to indemnify, defend, and hold harmless gagstore.gg, its owners, affiliates, staff, and partners from any and all claims, damages, liabilities, losses, costs, or expenses (including attorneys' fees) arising out of or related to:</p>
+                        <ul class="tos_category_points">
+                            <li>Your use of our service;</li>
+                            <li>Your violation of these Terms;</li>
+                            <li>Any claim by a third party that your actions violated their rights or applicable law;</li>
+                            <li>Any enforcement action taken against your Roblox account, Discord account, or involvement within the Grow a Garden experience as a result of your activity;</li>
+                            <li>Any dispute or policy violation resulting from your interaction with Roblox Corporation, Discord Inc, or Grow a Garden's development team.</li>
+                        </ul>
+                        <p class="tos_category_description">This indemnity survives the termination or expiration of these Terms and your use of the service.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">PROHIBITED USES</h2>
+                        <p class="tos_category_description">You may not use this site, our Discord server, or our services to:</p>
+                        <ul class="tos_category_points">
+                            <li>Engage in chargebacks, fraudulent payments, identity abuse, or financial manipulation of any kind</li>
+                            <li>Harass, threaten, dox, impersonate, or defame our staff, users, moderators, or community members</li>
+                            <li>Submit false legal claims or impersonate representatives of Roblox Corporation, Discord Inc, or any U.S. government or law enforcement agency</li>
+                            <li>Coordinate mass reporting, blackmail, or attempts to trigger enforcement on any third-party platform</li>
+                            <li>Misrepresent yourself as affiliated with Roblox, Discord, Grow a Garden, or any entity referenced on our site</li>
+                            <li>Circumvent, exploit, or interfere with our support systems, moderation efforts, or internal operations</li>
+                        </ul>
+                        <p class="tos_category_description">Violators may be permanently banned, denied access to services, and reported to Roblox Corporation, Discord Inc, or appropriate legal authorities in the event of harassment, fraud, impersonation, or criminal activity without warning.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">MODIFICATIONS TO TERMS</h2>
+                        <p class="tos_category_description">We reserve the right to update or modify these Terms of Service at any time. Continued use of our services following updates constitutes acceptance.</p>
+                    </div>
+                    <div class="tos_category">
+                        <h2 class="tos_category_header">CONTACT & SUPPORT</h2>
+                        <p class="tos_category_description">
+                            For support or legal inquiries, please email us at: info@gagstore.gg
+                            <br>
+                            Customer support is available via:
+                        </p>
+                        <ul class="tos_category_points">
+                            <li>Discord Ticket System</li>
+                            <li>Email (support@gagstore.gg)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer_section">
+            <div class="store_info">
+                <div class="store_info_header">
+                    <img src="images/gagstore_logo.gif" alt="" class="store_info_logo">
+                    <h2>gagstore.gg</h2>
+                </div>
+                <p>The BEST Marketplace for Purchasing Grow a Garden Pets and Sheckles</p>
+            </div>
+            <div class="footer-heading footer-1">
+                <h2>Quick Links</h2>
+                <a href="/public/index.html">Home</a>
+                <a href="/public/products.html">Products</a>
+                <a href="/public/faq.html">FAQ</a>
+                <a href="https://discord.gg/growgardening">Discord</a>
+            </div>
+            <div class="footer-heading footer-2">
+                <h2>Terms of Agreement</h2>
+                <a href="/public/tos.html">Terms of Service</a>
+                <a href="https://www.shopify.com/legal/privacy">Privacy Policy</a>
+                <a href="/public/refund.html">Refund Policy</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="https://kit.fontawesome.com/ab78a32115.js" crossorigin="anonymous"></script>
+</body>
+</html>
