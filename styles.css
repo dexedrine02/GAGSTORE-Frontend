@@ -134,12 +134,11 @@ section {
 .navbar {
 	position: sticky;
 	height: 70px;
-	width: 80vw;
+	width: min(80vw, 80%);
 	max-width: 1000px;
-	justify-self: center;
+	place-self: center;
 	top: 30px;
 	z-index: 999;
-	display: flex;
 }
 
 .navbar_container {
