@@ -128,7 +128,6 @@ let removeItem = async (id) => {
 	const itemEl = document.getElementById(id)?.closest('.cart_item');
 	if (itemEl) itemEl.remove();
 
-	// 3. If cart is empty, update label
 	if (basket.length === 0) {
 		cart_label.innerHTML = `
 			Your cart is empty
@@ -137,7 +136,6 @@ let removeItem = async (id) => {
 			</a>`;
 	}
 
-	// 4. Refresh upsells (optional — can delay until later for speed)
 	await generateUpsellItems();
 };
 
@@ -350,7 +348,7 @@ async function checkoutWithShopify() {
 async function handleLoginCallback() {
 	const params = new URLSearchParams(window.location.search);
 
-	const sessionId = params.get('sessionId'); // if passed via URL
+	const sessionId = params.get('sessionId');
 	if (sessionId) {
 		localStorage.setItem('session_id', sessionId);
 	}
