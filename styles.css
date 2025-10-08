@@ -68,6 +68,7 @@ section {
 	width: 100vw;
 	max-width: 1300px;
 	justify-self: center;
+	margin: 0 auto;
 	margin-top: 40px;
 }
 
@@ -768,6 +769,7 @@ section {
 	border-radius: 12px;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);
+	margin: 0 auto;
 }
 
 .section_title {
@@ -906,7 +908,7 @@ section {
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	.quality_item p {
 		font-size: 0.9rem;
 	}
@@ -1135,6 +1137,7 @@ section {
 	width: 90%;
 	max-width: 1700px;
 	justify-self: center;
+	margin: 0 auto;
 
 	container-type: inline-size;
 	container-name: products_container;
@@ -1361,6 +1364,7 @@ section {
 	width: 100vw;
 	max-width: 1300px;
 	justify-self: center;
+	margin: 0 auto;
 	padding: 30px;
 }
 
@@ -1421,6 +1425,8 @@ section {
 
 .tos_section {
 	padding: 40px;
+	justify-self: center;
+	margin: 0 auto;
 }
 
 .tos_container {
