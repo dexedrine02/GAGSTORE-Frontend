@@ -648,7 +648,7 @@ section {
 	#mobile_menu.is-active {
 		position: absolute;
 		top: 5%;
-		right: 14%;
+		right: 20%;
 		transform: translate(5%, 20%);
 	}
 
@@ -898,6 +898,12 @@ section {
 	}
 }
 
+@media screen and (max-width: 800px) {
+	.store_info_header img {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 500px) {
 	.quality_item p {
 		font-size: 0.9rem;
@@ -1061,7 +1067,7 @@ section {
 #product_add_panel {
 	position: fixed;
 	height: 100vh;
-	width: 500px;
+	width: 400px;
 	padding: 100px 30px;
 	display: flex;
 	flex-direction: column;
