@@ -139,6 +139,7 @@ section {
 	justify-self: center;
 	top: 30px;
 	z-index: 999;
+	display: flex;
 }
 
 .navbar_container {
