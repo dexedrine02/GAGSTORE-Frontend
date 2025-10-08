@@ -131,7 +131,7 @@ let removeItem = async (id) => {
 	if (basket.length === 0) {
 		cart_label.innerHTML = `
 			Your cart is empty
-			<a href="products.html">
+			<a href="products">
 				<button class="shop_button">Shop Now</button>
 			</a>`;
 	}
@@ -226,7 +226,7 @@ let generateCartItems = async () => {
 	if (basket.length === 0) {
 		cart_label.innerHTML = `
             Your cart is empty
-            <a href="products.html">
+            <a href="products">
                 <button class="shop_button">Shop Now</button>
             </a>`;
 		return;
@@ -300,6 +300,8 @@ async function checkoutWithShopify() {
 		if (!syncResponse.ok) {
 			throw new Error(`HTTP error! status: ${syncResponse.status}`);
 		}
+
+		console.log('synced');
 
 		const data = await syncResponse.json();
 
